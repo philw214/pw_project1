@@ -1,11 +1,12 @@
 class Card < ActiveRecord::Base
-  has_one :answer, dependent: :destroy
   belongs_to :category
-  validates :question, presence: true
-  validates :question, length: {minimum: 8}
-
+  # validates :question, presence: true
+  # validates :question, length: {minimum: 8}
+  # validates :answer, presence: true
+  # validates :answer, length: {minimum: 2}
+#
 def to_s
-  return "Question: " + question
+  return "#{id}. " +  question
 end
 
 end

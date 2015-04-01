@@ -1,5 +1,9 @@
 class Category < ActiveRecord::Base
     has_many :cards, dependent: :destroy
-    validates :category, presence: true
+    # validates :category, presence: true
+
+    def to_s
+      return category   
+    end
 
 end
