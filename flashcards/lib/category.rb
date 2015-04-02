@@ -3,7 +3,7 @@ class Category < ActiveRecord::Base
     # validates :category, presence: true
 
     def to_s
-      return category   
+      return "#{id}. " + category   
     end
 
 end

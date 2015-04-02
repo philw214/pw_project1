@@ -6,7 +6,7 @@ class Card < ActiveRecord::Base
   # validates :answer, length: {minimum: 2}
 #
 def to_s
-  return "#{id}. " +  question
+  return question
 end
 
 end

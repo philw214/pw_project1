@@ -8,6 +8,40 @@ require_relative 'lib/category'
 
 
 
+def play
+# puts"Select Play Type:
+#     1. By Category"
+#     num = gets.chomp.to_i
+#      if num == 1
+correct = []
+incorrect = []
+puts"Select Category"
+puts Category.all
+choice = gets.chomp.to_i
+
+cat = Category.find_by(id:choice)
+
+
+  cat.cards.each do |question, answer|
+    puts question
+    puts"Your answer:"
+    ans = gets.chomp
+    if ans == question.answer
+      puts "right"
+      correct << 1
+    else
+    puts question.answer
+      puts"wrong"
+      incorrect << 1
+    end
+
+  end
+
+    puts"you got #{correct.count} correct and #{incorrect.count} incorrect."
+
+
+
+end
 
 
 
@@ -33,25 +67,32 @@ puts"
 2.Create New Flashcard
 3.Edit A Flashcard
 4.Delete A Flashcard
-5.View Score/Recent Answers
+5.Play!
 0.Exit
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 return gets.chomp.to_i
 end
 
-# def view
-#   puts"View:
-#   1. Categories
-#   2. All Cards"
-#
-# end
+ def view
+   puts"View:
+   1. All Cards
+   2. Categories"
+   num = gets.chomp.to_i
+
+   if num == 1
+     puts Card.all
+   else
+     puts Category.all
+   end
+ end
 
 
 def create_card
 
   puts"Enter New Card Category:"
   new_cat = Category.new do |cat|
-  cat.category = gets.chomp
+    puts Category.all
+    cat.category = gets.chomp
   end
 
   new_card = Card.new do |card|
@@ -97,22 +138,15 @@ loop do
  case user_choice
 
   when 1
-      puts"View:
-       1. Categories
-       2. All Cards"
-       num = gets.chomp.to_i
-
-       if num == 1
-         puts Card.all
-       else
-         puts Category.all
-       end
+    view
   when 2
     create_card
   when 3
     edit_card
   when 4
     delete_card
+  when 5
+    play
   when 0
     break
   end
