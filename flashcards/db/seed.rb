@@ -25,5 +25,5 @@ geography.cards.create([{question:"Redwoods, the world's tallest trees, are foun
 
 science.cards.create([{question:"What is the largest planet in our solar system?", answer: "Jupiter"},
 {question:"Which prefix is often used with scientific terms to indicate that something is the same, equal or constant?", answer:"iso"},
-{question:"What is the result of accumulated stress along the boundaries of lithospheric plates", answer:"earthquake"},
+{question:"What is the result of accumulated stress along the boundaries of lithospheric plates?", answer:"earthquake"},
 {question:""}])

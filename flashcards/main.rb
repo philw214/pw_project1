@@ -15,7 +15,6 @@ def play
 
  cat = Category.find_by(id:choice)
 
-
  cat.cards.each do |question, answer|
    puts question
    puts"Your answer:"
@@ -28,7 +27,7 @@ def play
      puts"Correct answer: " + question.answer
      incorrect << 1
    end
-  end
+ end
  puts"You answered #{correct.count} correctly and #{incorrect.count} incorrectly."
 end
 
