@@ -3,19 +3,37 @@
 
 The flashcard trivia app will allow the user to interact with the program in the following ways:
 
--Creating a new trivia flashcard
--Viewing all flashcards
+-Create a new trivia flashcard
+-Create a new category
 -Edit a flashcard
--Deleting a flashcard
+-Delete a flashcard
+-Delete a category
 -Play a game of trivia and see score count of correct/incorrect
 
 
-#Program Requirements are as follows:
+Menu Spec
+This program should have a menu that allows a user to:
+-create a card/category
+-edit a card
+-delete a card/category
+-play a game
+-exit app
 
--User should be able to see all questions
--User should be able to see number of questions answered correctly
--User should be able to create categories
--User should be able to view flashcards in specific category
+Card Spec
+-has an id
+-has a question
+-has an answer
+-has a category id
+
+Category
+-has an id
+-has a category
+
+
+
+
+
+
 --------------------------------------------------------------------
 
 

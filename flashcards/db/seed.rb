@@ -8,12 +8,22 @@ Card.destroy_all
 Category.destroy_all
 
 
-card = Card.create([{question:"What is 5 + 1?", answer: "6"}])
 
-Category.create([{category:"Math"}])
-Category.create([{category:"Science"}])
+
+
 Category.create([{category:"Geography"}])
+Category.create([{category:"Science"}])
 
-math = Category.find_by(category:"Math")
-math.cards.create([{question:"question1?", answer: "answer1"}, {question:"question2", answer:"answer2"},
-  {question:"question3", answer:"answer3"}])
+
+science = Category.find_by(category:"Science")
+geography = Category.find_by(category:"Geography")
+
+geography.cards.create([{question:"Redwoods, the world's tallest trees, are found in which state?", answer:"California"},
+{question:"Where does the Missouri River begin?", answer:"Montana"}, {question:"Which continent has the most countries?", answer:"Africa"},
+{question:"What is the capital of the Philippines?", answer:"Manila"},{question:"What other European country had French as an official language for over 600 years?", answer:"England"},
+{question:"Which country contains more than 50% of the world's lakes?", answer:"Canada"}])
+
+science.cards.create([{question:"What is the largest planet in our solar system?", answer: "Jupiter"},
+{question:"Which prefix is often used with scientific terms to indicate that something is the same, equal or constant?", answer:"iso"},
+{question:"What is the result of accumulated stress along the boundaries of lithospheric plates", answer:"earthquake"},
+{question:""}])
