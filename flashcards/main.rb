@@ -5,12 +5,17 @@ require_relative 'db/connection'
 require_relative 'lib/card'
 require_relative 'lib/category'
 
-
+# we do this behavior alot, where we're prompting the user for information, and then getting user input, what is a way we might be able to encapsulate this logic into a method'
+# def get_user_input prompt
+#   puts prompt
+#   gets.chomp
+# end
 def play
  correct = []
  incorrect = []
- puts"Select Category"
  puts Category.all
+ # choice = get_user_input("Select Category").to_i
+ puts"Select Category"
  choice = gets.chomp.to_i
 
  cat = Category.find_by(id:choice)
@@ -64,7 +69,7 @@ def create_category
   category_attr[:category] = gets.chomp
   return category_attr
 end
-
+# see if the below methods can be abstrated into class definitions
 def create_card
   card_attr = {}
   puts"Enter New Card Question:"
@@ -115,6 +120,10 @@ loop do
   when 2
     Category.create(create_category)
   when 3
+    # puts Category.all
+    # category_id = get_user_input("Enter Category id")
+    # category = Category.find_by(id)
+    # category.create_card
     Card.create(create_card)
   when 4
     edit_card
@@ -128,3 +137,7 @@ loop do
     break
   end
 end
+
+# try to refactor with enumerables any time your just puts'ing AR objects
+# try to refactor to get logic being applied to your AR objects inside class definitions
+# looks good other than that
