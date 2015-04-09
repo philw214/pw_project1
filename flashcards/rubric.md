@@ -7,7 +7,6 @@ Software Production: 1
 Code Quality: 1
 - overall code quality is good
 - see comments for refactoring opportunities
-- there were a couple of class with improper code formatting
 - to achieve a 2 in this category you would want to abstract alot of the logic in your main interface into class definitions. Read comments in `app.rb`
 
 Associations: 1
