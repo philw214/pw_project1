@@ -13,3 +13,8 @@
  specific category.
  - As a user, I want to be able to play a game of trivia and have the app
  show me correct/incorrect count.
+
+
+
+*** shouldn't be in db folder
+*** user stories should be in third person as user

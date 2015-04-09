@@ -10,3 +10,4 @@ it "has a name" do
   expect(card).to_not be_nil
  end
 end
+# test looks good, look to flesh out tests
